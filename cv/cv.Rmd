@@ -1,0 +1,179 @@
+---
+name: David
+surname: Lucey
+position: Founder, Redwall Analytics
+address: ''
+phone: +1-917-854-6420
+www: redwallanalytics.com
+email: dnl2001@stern.nyu.edu
+twitter: lucey_david
+github: luceydav
+linkedin: david-lucey-cfa-cpa-mba-msba
+date: "`r format(Sys.time(), '%B %Y')`"
+aboutme: Data literate executive combining advanced analytics with deep financial markets
+  and investment domain experience
+docname: Resume
+output:
+  vitae::twentyseconds: default
+  vitae: default
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+packages <- c('vitae',
+              'tibble',
+              'dplyr',
+              'here',
+              'readr',
+              'tidyRSS'
+              )
+
+if (length(setdiff(packages,rownames(installed.packages()))) > 0) {
+  install.packages(setdiff(packages, rownames(installed.packages())))  
+}
+
+invisible(lapply(packages, library, character.only = TRUE))
+
+source(file = "data.r")
+```
+
+
+```{r eval=FALSE, include=FALSE}
+# Remember to spell check!!
+spelling::spell_check_files(c("cv.Rmd", "data.r"))
+```
+
+# Current Activities
+
+```{r redwall, echo=FALSE, message=FALSE, warning=FALSE, inclue=FALSE}
+redwall  %>%
+  detailed_entries(
+    with = company,
+    what = title,
+    why = detail,
+    when = dates,
+    where = loc,
+    .protect = FALSE
+  )
+```
+
+# Common Tools
+
+```{r skills, echo=FALSE, message=FALSE, warning=FALSE}
+skills %>%
+  brief_entries(
+    #with = skills
+    what = area
+  )
+```
+
+# Project Links
+
+```{r projects, echo=FALSE, message=FALSE, warning=FALSE}
+projects[1:7,] %>%
+  detailed_entries(
+    what = name,
+    why = explain,
+    when = year,
+    .protect = FALSE
+  )
+
+```
+
+# Recent Education
+
+```{r}
+edu[1:4,] %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = details,
+    when = glue::glue("{startYear} - {endYear}", .na = ""),
+    where = where,
+    .protect = FALSE
+  )
+```
+
+
+\pagebreak
+# Past Education
+
+```{r education2, echo=FALSE, message=FALSE, warning=FALSE}
+edu[5:8, ] %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = details,
+    when = glue::glue("{startYear} - {endYear}", .na = ""),
+    where = where,
+    .protect = FALSE
+  )
+```
+
+# Past Experience
+
+```{r alpine, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+alpine  %>%
+  detailed_entries(
+    with = company,
+    what = title,
+    why = detail,
+    when = dates,
+    where = loc
+  )
+```
+
+
+```{r barcap, echo=FALSE, message=FALSE, warning=FALSE}
+bcp %>%
+  detailed_entries(
+    with = company,
+    what = title,
+    why = detail,
+    when = dates,
+    where = loc
+  )
+```
+
+
+```{r goldman, echo=FALSE, message=FALSE, warning=FALSE}
+gs %>%
+  detailed_entries(
+    with = company,
+    what = title,
+    why = detail,
+    when = dates,
+    where = loc
+  )
+```
+
+
+```{r ubs, echo=FALSE, message=FALSE, warning=FALSE}
+ubs %>%
+  detailed_entries(
+    with = company,
+    what = title,
+    why = detail,
+    when = dates,
+    where = loc
+  )
+```
+
+# Past Certifications
+
+```{r certifications, echo=FALSE, message=FALSE, warning=FALSE}
+certs %>% 
+  brief_entries(
+    what = project,
+    when = date,
+    with = status
+  )
+```
+
+
