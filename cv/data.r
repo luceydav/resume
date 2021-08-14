@@ -12,16 +12,21 @@ skills <- tribble(
 #d <- tidyRSS::tidyfeed('https://redwallanalytics.com/index.xml')
 projects <- tribble(
   ~ name, ~ year, ~ explain,
+  "\\href{https://redwallanalytics.com/2021/08/09/introducing-the-redwall-red-flag-analyzer-with-new-constructs-data/}{Introducing Redwall Red Flag Explorer with New Constructs Data}", "2021", "Built financial ratio analysis on 125,000 financial statements to mine for impending problems",
+  "\\href{https://redwallanalytics.com/2021/08/06/introducing-the-redwall-irs-soi-tax-dashboard/}{Introducing the Redwall IRS SOI Tax Dashboard}", "2021", "Cleaned messy IRS spreadsheets into modular Shiny app showing tax data from most US zips",
   "\\href{https://redwallanalytics.com/2020/03/31/parsing-mass-municipal-pdf-cafrs-with-tabulizer-pdftools-and-aws-textract-part-1/}{Parsing City PDF CAFRs with pdftools, tabula and Textract}", "2020", "Extracted key elements from 150 financial statement PDFs using OCR tools",
   "\\href{https://redwallanalytics.com/2020/09/10/learning-sql-and-exploring-xbrl-with-secdatabase-com-part-1/}{Learning SQL and Exploring XBRL with secdatabase.com}", "2020", "Queried from and Analyzed 200 million row SEC Edgar XBRL database",
   "\\href{https://redwallanalytics.com/2020/07/22/using-drake-for-etl-to-build-shiny-app-for-900k-ct-real-estate-sales/}{Using {drake} for ETL and building Shiny app for CT real estate sales}", "2020", "Cleaned 1 million rows of public real estate sales for display in \\href{https://luceyda.shinyapps.io/ct_real_assess/}{Shiny App}",
   "\\href{https://redwallanalytics.com/2020/06/12/checking-up-on-american-funds-performance-through-cycle/}{Evaluating American Funds Portfolio Over Three Market Cycles}", "2020", "Modeled weekly performance of portfolio versus custom-built benchmark",
-  "\\href{https://redwallanalytics.com/2020/02/18/tracking-r-d-spending-by-700-listed-us-pharma-companies/}{Tracking Research spending by 700 Listed US Pharma Companies}", "2020", "Retrieved JSON API data to examine aggregate industry research spending over time",
   "\\href{https://redwallanalytics.com/2020/02/18/a-walk-though-of-accessing-financial-statements-with-xbrl-in-r-part-1/}{Accessing XBRL Financial Statements with R}", "2020", "Tutorial on how to scrape SEC Edgar with open-source R tools",
+  "\\href{https://redwallanalytics.com/2020/02/18/tracking-r-d-spending-by-700-listed-us-pharma-companies/}{Tracking Research spending by 700 Listed US Pharma Companies}", "2020", "Retrieved JSON API data to examine aggregate industry research spending over time",
   "\\href{https://redwallanalytics.com/2019/10/12/replicating-yankee-institute-risk-score-over-15-years/}{Replicating Yankee Institute Risk Score Over 15 Years}", "2019", "Extracted key financial elements from annual Connecticut MS Access DB's to build an \\href{https://luceyda.shinyapps.io/yankee_shiny/}{interactive Shiny app} calculating town vulnerability over time",
   "\\href{https://redwallanalytics.com/2020/06/07/scraping-long-beach-island-summer-rentals-with-python/}{Scraping Long Beach Island Summer Rentals with Python}", "2020", "Scraped 1200+ summer rental listings with BeautifulSoup to visualize seasonal availability and prices by local town",
   "\\href{https://redwallanalytics.com/}{Redwall Analytics Blogsite}", "2018", "Built and maintained well-formatted html website using R blogdown package"
 )
+
+#
+# 
 
 # Employment
 
